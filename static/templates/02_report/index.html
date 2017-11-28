@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>舆情上报列表</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <!-- 公用插件开始 -->
+    <script src="../../assets/plugins/jquery-3.1.1/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/bootstrap-3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="../../assets/plugins/bootstrap-table/bootstrap-table.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-table/bootstrap-table.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/bootstrap-table/bootstrap-table-zh-CN.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.min.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/bootstrap-select/js/i18n/defaults-zh_CN.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/jquery-asDatepicker/asDatepicker.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/jquery-asDatepicker/jquery-asDatepicker.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/icheck-1.x/skins/all.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/icheck-1.x/icheck.min.js" type="text/javascript"></script>
+    <!-- 公用插件结束 -->
+    <!-- css开始 -->
+    <link href="../../assets/css/commonStyle/common.css" rel="stylesheet" >
+    <link href="../../assets/css/all.css" rel="stylesheet" >
+    <link href="../../assets/css/changeBootstrap.css" rel="stylesheet" >
+    <link href="../../assets/css/alert.css" rel="stylesheet" >
+    <!-- css结束 -->
+
+    <style type="text/css">
+        .fixed-table-toolbar{
+            display: none;
+        }
+    </style>
+</head>
+<body class="">
+<div class="header clearfix">
+    <div class="header-left col-md-8">
+        <a href="" class="col-md-6 clearfix" id="">
+            <img src="" class="logo pull-left" alt="">
+            <div class="logoDiv pull-left">
+
+                <img src="" class="logoText" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="header-right col-md-4 text-right" style="padding-top: 20px;">
+        <div class="roleDiv">您好，<span class="role">admin </span></div>
+        <a href="" class="quitBtn"><i class="quit"></i>退出</a>
+    </div>
+</div>
+<div id="wrapper">
+    <div id="page-wrapper" style="margin-left: 260px;">
+        <div class="page-content clearfix">
+            <div class="bgf">
+                <div class="portlet box clearfix">
+                    <div class="portlet-header clearfix">
+                        <div class="filterDiv">
+                            <span>筛选条件：</span>
+                            <input type="text" class="inlineBlock marginX10 calendar-input" placeholder="请输入关键词">
+                            <div class="dateDiv inlineBlock marginX10">
+                                <select class="selectpicker">
+                                    <option value="全部状态">全部状态</option>
+                                    <option value="已上报">已上报</option>
+                                    <option value="已采纳">已采纳</option>
+                                    <option value="未采纳">未采纳</option>
+                                </select>
+                            </div>
+                            <div class="dateDiv2 inlineBlock marginX10">
+                                <select class="selectpicker">
+                                    <option value="全部来源">全部来源</option>
+                                    <option value="网络">网络</option>
+                                    <option value="媒体">媒体</option>
+                                    <option value="现场">现场</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                            </div>
+                            <a href="javascript:void(0)" class="whiteButton">
+                                搜索
+                            </a>
+                            <div class="tools">
+                                <a href="javascript:void(0)" class="modalBtn">
+                                    上报舆情
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="portlet-body clearfix">
+                        <table class="p-table" id="table-report" data-toggle="table" data-url="" data-method="post"
+                               data-striped="true"
+                               data-query-params="queryParams"
+                               data-toolbar="#toolbar"
+                               data-pagination="true"
+                               data-page-size="10"
+                        >
+                            <thead>
+                            <tr>
+                                <th data-field="sort">舆情ID</th>
+                                <th data-field="sentimentName">舆情标题</th>
+                                <th data-field="source">来源</th>
+                                <th data-field="grade">等级</th>
+                                <th data-field="influenceRange">影响范围</th>
+                                <th data-field="status">状态</th>
+                                <th data-field="ReportTime">上报时间</th>
+                                <th data-field="operate">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-blue"></span>已上报</td>
+                                   <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>媒体</td>
+                                    <td>橙色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-green"></span>已采纳</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>现场</td>
+                                    <td>黄色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-red"></span>未采纳</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>其他</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-blue"></span>已上报</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-red"></span>未采纳</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-green"></span>已采纳</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-red"></span>未采纳</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-green"></span>已采纳</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-blue"></span>已上报</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-red"></span>未采纳</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-green"></span>已采纳</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-blue"></span>已上报</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TradeCode21</td>
+                                    <td><span class="slh text-left" style="display: block;width:220px;" title="携程亲子园事件最新进展：更多虐童视频流出" >携程亲子园事件最新进展：更多虐童视频流出</span></td>
+                                    <td>网络</td>
+                                    <td>红色</td>
+                                    <td>1000</td>
+                                    <td><span class="process-circle process-circle-blue"></span>已上报</td>
+                                    <td>2017-11-28 14:40</td>
+                                    <td>
+                                        <button class="detailsBtn" type="button">详情</button>
+                                        <button class="delete"  type="button">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--page-content结束-->
+    </div>
+    <!--page-wrapper结束-->
+</div>
+<!--wrapper结束-->
+<div id="footer">
+    <div class="text-center">Copyright © 2017 中科点击（北京）科技有限公司版权所有</div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('.selectpicker').selectpicker({
+            style: 'btn-info',
+            size: 5
+        });
+       /* $(".viewReportBtn").on("click",function () {
+            location.href="acceptanceReport.html";
+        });*/
+
+       //高度
+        ResizeHeight();
+        window.onresize=function(){
+            ResizeHeight();
+        }
+
+    });
+    function ResizeHeight(){
+        var height=$(window).height()- 67 - 40;
+        $("#wrapper").css("min-height",height);
+    }
+</script>
+
+</body>
+</html>
