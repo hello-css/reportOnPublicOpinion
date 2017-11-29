@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>舆情上报详情（编辑）</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <!-- 公用插件开始 -->
+    <script src="../../assets/plugins/jquery-3.1.1/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/bootstrap-3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="../../assets/plugins/bootstrap-table/bootstrap-table.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-table/bootstrap-table.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/bootstrap-table/bootstrap-table-zh-CN.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.min.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/bootstrap-select/js/i18n/defaults-zh_CN.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/jquery-asDatepicker/asDatepicker.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/jquery-asDatepicker/jquery-asDatepicker.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/icheck-1.x/skins/all.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/icheck-1.x/icheck.min.js" type="text/javascript"></script>
+    <!-- 公用插件结束 -->
+    <!-- css开始 -->
+    <link href="../../assets/css/commonStyle/common.css" rel="stylesheet" >
+    <link href="../../assets/css/all.css" rel="stylesheet" >
+    <link href="../../assets/css/changeBootstrap.css" rel="stylesheet" >
+    <link href="../../assets/css/alert.css" rel="stylesheet" >
+    <link href="../../assets/plugins/wangEditor-3.0.15/release/wangEditor.css" type="text/css" rel="stylesheet"><!-- 编辑器-->
+    <script type="text/javascript" src="../../assets/plugins/wangEditor-3.0.15/release/wangEditor.js" charset="utf-8"></script><!-- 编辑器-->
+    <!-- css结束 -->
+
+    <style type="text/css">
+
+    </style>
+</head>
+<body class="">
+<div class="header clearfix">
+    <div class="header-left col-md-8">
+        <a href="" class="col-md-6 clearfix" id="">
+            <img src="" class="logo pull-left" alt="">
+            <div class="logoDiv pull-left">
+
+                <img src="" class="logoText" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="header-right col-md-4 text-right" style="padding-top: 20px;">
+        <div class="roleDiv">您好，<span class="role">admin </span></div>
+        <a href="" class="quitBtn"><i class="quit"></i>退出</a>
+    </div>
+</div>
+<div id="wrapper">
+    <div id="page-wrapper" style="margin-left: 260px;">
+        <div class="page-content clearfix">
+            <div class="bgf">
+                <div class="portlet box clearfix">
+                    <div class="portlet-header clearfix">
+                            <span class="circle1"></span>
+                            <span class="inlineBlock  fs16">基本信息</span>
+                    </div>
+                    <div class="portlet-body clearfix">
+                        <div class="infoMenuDiv">
+                            <div class="col-md-5 m8">
+                                <label for=""  class="control-label col-md-3"><span class="require">*</span>舆情标题:</label>
+                                <input type="text" class="inlineBlock calendar-input" placeholder="请输入舆情标题，50汉字内">
+                            </div>
+                            <div class="col-md-6 m8 dateDiv3">
+                                <label for=""  class="control-label col-md-3"><span class="require">*</span>来源:</label>
+                                <select class="selectpicker">
+                                    <option value="请选择来源">请选择来源</option>
+                                    <option value="网络">网络</option>
+                                    <option value="媒体">媒体</option>
+                                    <option value="现场">现场</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5 m8 dateDiv3">
+                                <label for=""  class="control-label col-md-3"><span class="require">*</span>等级:</label>
+                                <select class="selectpicker">
+                                    <option value="请选择等级">请选择等级</option>
+                                    <option value="红色">红色</option>
+                                    <option value="黄色">黄色</option>
+                                    <option value="橙色">橙色</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 m8 dateDiv3">
+                                <label for=""  class="control-label col-md-3"><span class="require">*</span>影响范围:</label>
+                                <select class="selectpicker col-md-3 noPaddingX">
+                                    <option value="点击数">点击数</option>
+                                    <option value="评论数">评论数</option>
+                                    <option value="预估值">预估值</option>
+                                </select>
+                                <input type="text" class="inlineBlock calendar-input2" placeholder="请输入数值">
+                            </div>
+                            <div class="col-md-5 m8">
+                                <label for=""  class="control-label col-md-3">链接网址:</label>
+                                <input type="text" class="inlineBlock calendar-input" placeholder="请输入链接网址（选填）">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet box clearfix">
+                    <div class="portlet-header clearfix">
+                        <span class="circle1"></span>
+                        <span class="inlineBlock  fs16">舆情内容</span>
+                    </div>
+                    <div class="portlet-body clearfix">
+
+                        <!-- 编辑器wangEditor-->
+                        <div id="editor">
+                            <p>趣闻 1947 年，时装设计师 Elsa Schiaparelli 将“艳粉色”引入西方时尚圈。 桃色可以营造亲密氛围，减少攻击性和敌意。 由于听说粉色有一种镇定效果，有些球队会把客队的休息室漆成粉色。 对于粉色的研究发现，男性举重运动员在粉色房间内似乎感到力不从心，而女性举重运动员面对这种颜色反而会有变强的倾向。 糕点从粉色盒子里取出或盛在粉色盘子里时，尝起来会更美味（这种情况仅适用于甜点），因为粉色令我们渴望糖份。</p>
+                         </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--page-content结束-->
+    </div>
+    <!--page-wrapper结束-->
+</div>
+<!--wrapper结束-->
+<div id="footer">
+    <div class="text-center">Copyright © 2017 中科点击（北京）科技有限公司版权所有</div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('.selectpicker').selectpicker({
+            style: 'btn-info',
+            size: 5
+        });
+
+        //实例化编辑器
+        var E = window.wangEditor;
+        var editor = new E('#editor');
+        editor.create();
+
+
+       //高度
+        ResizeHeight();
+        window.onresize=function(){
+            ResizeHeight();
+        }
+
+    });
+    function ResizeHeight(){
+        var height=$(window).height()- 67 - 40;
+        $("#wrapper").css("min-height",height);
+    }
+</script>
+
+</body>
+</html>
