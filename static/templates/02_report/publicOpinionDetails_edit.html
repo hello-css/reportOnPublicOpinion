@@ -36,7 +36,7 @@
 
     </style>
 </head>
-<body class="">
+<body>
 <div class="header clearfix">
     <div class="header-left col-md-8">
         <a href="" class="col-md-6 clearfix" id="">
@@ -55,7 +55,7 @@
 <div id="wrapper">
     <div id="page-wrapper" style="margin-left: 260px;">
         <div class="page-content clearfix">
-            <div class="bgf">
+            <div class="bgf clearfix">
                 <div class="portlet box clearfix">
                     <div class="portlet-header clearfix">
                             <span class="circle1"></span>
@@ -113,8 +113,10 @@
                         <div id="editor">
                             <p>趣闻 1947 年，时装设计师 Elsa Schiaparelli 将“艳粉色”引入西方时尚圈。 桃色可以营造亲密氛围，减少攻击性和敌意。 由于听说粉色有一种镇定效果，有些球队会把客队的休息室漆成粉色。 对于粉色的研究发现，男性举重运动员在粉色房间内似乎感到力不从心，而女性举重运动员面对这种颜色反而会有变强的倾向。 糕点从粉色盒子里取出或盛在粉色盘子里时，尝起来会更美味（这种情况仅适用于甜点），因为粉色令我们渴望糖份。</p>
                          </div>
-
                     </div>
+                </div>
+                <div class="col-md-12 text-center  padding20 clearfix" id="showButton">
+                    <input id="" type="button" class="btn btn-primary sureBtn" onclick="" value="提交">
                 </div>
             </div>
         </div>
@@ -130,7 +132,7 @@
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         $('.selectpicker').selectpicker({
-            style: 'btn-info',
+            style: 'btn-default',
             size: 5
         });
 
@@ -141,16 +143,16 @@
 
 
        //高度
-        ResizeHeight();
+       /* ResizeHeight();
         window.onresize=function(){
             ResizeHeight();
-        }
+        }*/
 
     });
-    function ResizeHeight(){
+  /*  function ResizeHeight(){
         var height=$(window).height()- 67 - 40;
         $("#wrapper").css("min-height",height);
-    }
+    }*/
 </script>
 
 </body>
