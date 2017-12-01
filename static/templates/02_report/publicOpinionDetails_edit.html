@@ -130,6 +130,23 @@
     <div class="text-center">Copyright © 2017 中科点击（北京）科技有限公司版权所有</div>
 </div>
 
+<!--成功提示模态框-->
+<div id="tipper" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header logocbg">
+                <h5 class="modal-title colorwhite" id="">&nbsp;&nbsp;提示</h5>
+            </div>
+            <div class="modal-body  text-center">已提交成功！</div>
+            <div class="modal-footer">
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-default denyBtn" data-dismiss="modal">ok</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         $('.selectpicker').selectpicker({
@@ -137,9 +154,18 @@
             size: 5
         });
 
+        //提示框
+        $(".sureBtn").on("click",function () {
+            $("#tipper").modal("show");
+
+            //延迟1秒提示框消失
+            setTimeout('$("#tipper").modal("hide")',1000);
+        });
+
         //实例化编辑器
         var E = window.wangEditor;
         var editor = new E('#editor');
+        editor.customConfig.zIndex = 100;
         editor.create();
 
 

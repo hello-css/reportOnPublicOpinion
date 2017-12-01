@@ -35,7 +35,9 @@
     <script type="text/javascript" src="../../assets/plugins/wangEditor-3.0.15/release/wangEditor.js" charset="utf-8"></script><!-- 编辑器-->
 
     <style type="text/css">
-
+        .w-e-text-container{ /*编辑器文本区域高度*/
+            height: 470px !important;
+        }
     </style>
 </head>
 <body>
@@ -86,8 +88,9 @@
                     </div>
                     <div class="portlet-body clearfix">
                         <!-- 编辑器wangEditor-->
-                        <div id="editor">
-                            <div id="u1623_text" class="text ">
+                        <div id="editor" style="height: 500px;">
+                            <!--文章假数据 u1623_text -->
+                            <div id="u1623_text" class="text">
                                 <p><span style="font-family:'微软雅黑';">来源微信号：西雅图雷尼尔</span></p><p><span style="font-family:'微软雅黑';">　　携程亲子园事件最新进展与一些问题</span></p><p><span style="font-family:'微软雅黑';">　　1、携程亲子园事件最新进展</span></p><p><span style="font-family:'微软雅黑';">　　更多的虐童视频流出。</span></p><p><span style="font-family:'微软雅黑';">　　自行微博搜索，虐待的形式五花八门，有绑在椅子上，使劲踹，暴力殴打，折叠拉一字马。</span></p><p><span style="font-family:'微软雅黑';">　　这些保育员难道是从731来的，怎么能这么恶毒，怎么能下的去手啊！涉案人数会继续增加。</span></p><p><span style="font-family:'微软雅黑';">　　</span></p><div id="u1625" class="ax_default _图片"><img id="u1625_img" class="img " src="https://d2t44wh9rnwl5y.cloudfront.net/gsc/PHO4S0/f3/b3/30/f3b330dee8c549708daf23027ffbbafc/images/舆情上报详情（_审核）/u1625.png?token=28b061015f21881f88f3542610a57816"></div><p><span style="font-family:'微软雅黑';">　　2、亲子园家属方面</span></p><p><span style="font-family:'微软雅黑';">　　一名ID为@叶子_perryyeh 上海携程托儿班幼儿家长，在微博上同步报道事件的进展。大多数幼儿家长都是员工很难站出来和东家和妇联怼。</span></p><p><span style="font-family:'微软雅黑';">　　是的，别人平时在家里一根手指头都不会碰，没想到在这个地方遭到如此惨无人道的虐待。这就尴尬了。</span></p><p><span style="font-family:'微软雅黑';">　　3． 携程方面</span></p><p><span style="font-family:'微软雅黑';">　　携程的内部调查还在继续，高层非常重视。负责监管的两位员工已被开除。有可能涉及玩忽职守罪也会被起诉。希望无论牵涉到谁，该担责任的一个都别放过。</span></p>
                             </div>
                         </div>
@@ -126,7 +129,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <input id="" type="button" class="btn btn-primary modalBtn" onclick="" value="采纳">
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input id="" type="button" class="btn btn-primary modalBtn_lingtgray" onclick="" value="上报">
+                    <input id="reportBtn" type="button" class="btn btn-primary modalBtn_lingtgray" onclick="" value="上报">
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <input id="backListBtn" type="button" class="btn btn-primary modalBtn_lingtgray"  value="返回">
                 </div>
@@ -142,6 +145,23 @@
     <div class="text-center">Copyright © 2017 中科点击（北京）科技有限公司版权所有</div>
 </div>
 
+<!--成功提示模态框-->
+<div id="tipper" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header logocbg">
+                <h5 class="modal-title colorwhite" id="">&nbsp;&nbsp;提示</h5>
+            </div>
+            <div class="modal-body  text-center">已上报成功！</div>
+            <div class="modal-footer">
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-default denyBtn" data-dismiss="modal">ok</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         $('.selectpicker').selectpicker({
@@ -149,9 +169,18 @@
             size: 5
         });
 
+        //提示框
+        $("#reportBtn").on("click",function () {
+            $("#tipper").modal("show");
+
+            //延迟1秒提示框消失
+            setTimeout('$("#tipper").modal("hide")',1000);
+        });
+
         //实例化编辑器
         var E = window.wangEditor;
         var editor = new E('#editor');
+        editor.customConfig.zIndex = 100;
         editor.create();
 
         $("#backListBtn").on("click",function () {
