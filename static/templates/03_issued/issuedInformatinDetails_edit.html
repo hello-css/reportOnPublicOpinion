@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>信息下发详情（编辑）</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <!-- 公用插件开始 -->
+    <script src="../../assets/plugins/jquery-3.1.1/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/bootstrap-3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="../../assets/plugins/bootstrap-table/bootstrap-table.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-table/bootstrap-table.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/bootstrap-table/bootstrap-table-zh-CN.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.min.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/bootstrap-select/js/i18n/defaults-zh_CN.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/jquery-asDatepicker/asDatepicker.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/jquery-asDatepicker/jquery-asDatepicker.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/icheck-1.x/skins/all.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/icheck-1.x/icheck.min.js" type="text/javascript"></script>
+    <!-- 公用插件结束 -->
+    <!-- css开始 -->
+    <link href="../../assets/css/commonStyle/common.css" rel="stylesheet" >
+    <link href="../../assets/css/all.css" rel="stylesheet" >
+    <link href="../../assets/css/changeBootstrap.css" rel="stylesheet" >
+    <link href="../../assets/css/alert.css" rel="stylesheet" >
+    <!-- css结束 -->
+
+    <link href="../../assets/plugins/wangEditor-3.0.15/release/wangEditor.css" type="text/css" rel="stylesheet"><!-- 编辑器-->
+    <script type="text/javascript" src="../../assets/plugins/wangEditor-3.0.15/release/wangEditor.js" charset="utf-8"></script><!-- 编辑器-->
+
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="header clearfix">
+    <div class="header-left col-md-8">
+        <a href="" class="col-md-6 clearfix" id="">
+            <img src="" class="logo pull-left" alt="">
+            <div class="logoDiv pull-left">
+
+                <img src="" class="logoText" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="header-right col-md-4 text-right" style="padding-top: 20px;">
+        <div class="roleDiv">您好，<span class="role">admin </span></div>
+        <a href="" class="quitBtn"><i class="quit"></i>退出</a>
+    </div>
+</div>
+<div id="wrapper">
+    <div id="page-wrapper" style="margin-left: 260px;">
+        <div class="page-content clearfix">
+            <div class="bgf clearfix">
+                <div class="portlet box clearfix">
+                    <div class="portlet-header clearfix">
+                            <span class="circle1"></span>
+                            <span class="inlineBlock  fs16">基本信息</span>
+                    </div>
+                    <div class="portlet-body clearfix">
+                        <div class="infoMenuDiv">
+                            <div class="col-md-6 m8">
+                                <label for=""  class="control-label col-md-3"><span class="require">*</span>信息标题:</label>
+                                <input type="text" class="inlineBlock calendar-input" placeholder="请输入信息标题，50汉字内">
+                            </div>
+                            <div class="col-md-6 m8 dateDiv3">
+                                <label for=""  class="control-label col-md-3"><span class="require">*</span>信息类型:</label>
+                                <select class="selectpicker">
+                                    <option value="请选择类型">请选择类型</option>
+                                    <option value="网络">重要通知</option>
+                                    <option value="重要通知">工作安排</option>
+                                    <option value="工作建议">工作建议</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 m8 dateDiv3">
+                                <label for=""  class="control-label col-md-3"><span class="require">*</span>下发范围:</label>
+                                <select class="selectpicker">
+                                    <option value="请选择下发范围">请选择下发范围</option>
+                                    <option value="全部">全部</option>
+                                    <option value="地市级单位">地市级单位</option>
+                                    <option value="区县级单位">区县级单位</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet box clearfix">
+                    <div class="portlet-header clearfix">
+                        <span class="circle1"></span>
+                        <span class="inlineBlock  fs16">信息内容</span>
+                    </div>
+                    <div class="portlet-body clearfix">
+
+                        <!-- 编辑器wangEditor-->
+                        <div id="editor">
+                                <textarea id="u2837_input" class="text_sketch" style="width: 100%;height: 400px;">各乡镇街道财政(经)所、财政分局，局机关各科室、局属二级单位
+
+    　　今年来，全区财政工作坚持以科学发展观为指导，认真贯彻中央省市财政工作会议精神，充分发挥财政职能作用，狠抓各项工作的落实，有效提升了财政科学化精细化管理工作水平。为更好地总结上半年、谋划下半年工作，高标准地完成全年目标任务，请各地、单位及时做好XX年上半年工作总结。现将有关事项通知
+
+    　　一、各地、各单位要认真对照年初提出的工作目标及每月重点工作事项，结合各自实际，全面分析和总结上半年工作完成情况、主要工作亮点，做好利弊得失分析。工作总结要求重点突出、数据详实，文字简练。
+
+    　　二、深入查找工作中存在的问题、不足和薄弱环节，做到客观实在。
+
+    　　三、根据本年度的工作任务完成情况，明确下半年工作思路、工作重点和工作措施。要求思路清晰、重点明确、措施具体。
+
+    　　四、各地、各单位要本着实事求是、客观全面、认真负责的态度，精心组织，做好总结材料的撰写报送工作。上报材料经分管领导或包联领导把关签字后，于6月18日前报送到区局办公室，同时上传电子文本（邮箱：xxxxxx）
+
+    　　二o一o年六月十二日</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center  padding20 clearfix" id="showButton">
+                    <input id="" type="button" class="btn btn-primary sureBtn" onclick="" value="下发">
+                </div>
+            </div>
+        </div>
+        <!--page-content结束-->
+    </div>
+    <!--page-wrapper结束-->
+</div>
+<!--wrapper结束-->
+<div id="footer">
+    <div class="text-center">Copyright © 2017 中科点击（北京）科技有限公司版权所有</div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('.selectpicker').selectpicker({
+            style: 'btn-default',
+            size: 5
+        });
+
+       /* //提示框
+        $(".sureBtn").on("click",function () {
+            $("#tipper").modal("show");
+
+            //延迟1秒提示框消失
+            setTimeout('$("#tipper").modal("hide")',1000);
+        });*/
+
+        //实例化编辑器
+        var E = window.wangEditor;
+        var editor = new E('#editor');
+        editor.customConfig.zIndex = 100;
+        editor.create();
+
+
+       //高度
+        ResizeHeight();
+        window.onresize=function(){
+            ResizeHeight();
+        }
+
+    });
+    function ResizeHeight(){
+        var height=$(window).height()- 67 - 40;
+        $("#wrapper").css("min-height",height);
+    }
+</script>
+
+</body>
+</html>
