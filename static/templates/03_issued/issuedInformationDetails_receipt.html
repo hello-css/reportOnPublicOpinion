@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>舆情上报详情（审核）</title>
+    <title>信息下发详情（回执）</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta http-equiv="Cache-Control" content="no-store" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -64,23 +64,17 @@
                     <div class="portlet-header clearfix">
                         <div class="caseDescription" id="">
                             <div class="opinionHeader clearfix">
-                                <h5 class="fs16 bold">携程亲子园事件最新进展：更多虐童视频流出</h5>
+                                <h5 class="fs16 bold">《关于加强互联网舆论管理的通知》</h5>
                             </div>
                             <div class="opinionBody  clearfix">
                                 <div class="row m8">
-                                    <div class="col-md-6 noPaddingX">
-                                        来源：<span>网络</span>
-                                    </div>
-                                    <div class="col-md-6 noPaddingX">
-                                        等级：<span>红色</span>
+                                    <div class="col-md-12 noPaddingX">
+                                        信息类型：<span>重要通知</span>
                                     </div>
                                 </div>
                                 <div class="row m8">
-                                    <div class="col-md-6 noPaddingX">
-                                        影响范围：<span>点击数34</span>
-                                    </div>
-                                    <div class="col-md-6 noPaddingX">
-                                        链接网址：<a href="" class="colorgreen">http://tech.sina.com.cn/i/2017-11-13/doc-ifynshev5756392.shtml</a>
+                                    <div class="col-md-12 noPaddingX">
+                                        下发时间：<span>2017年12月04日 14:03</span>
                                     </div>
                                 </div>
                             </div>
@@ -97,26 +91,19 @@
 
                         <!--流程轴-->
                         <div class="bgf flowShaft">
-                            <h5  class="fs16 bold" style="padding: 10px 5px;">处理记录</h5>
+                            <h5 class="fs16 bold" style="padding: 10px 5px;">处理记录 <span class="fs12 colorgreen">已回执2/10</span></h5>
                             <div class="flowShaftSide state_active">
                                 <img src="../../assets/images/state_waite.png" alt="">
                                 <h5 >
                                     <i id="">2017-11-30  14:24:08</i>
-                                    <span class="flowShaftResult">用户名称2采纳舆情。</span>
+                                    <span class="flowShaftResult">用户名称2已回执。</span>
                                 </h5>
                             </div>
-                            <div class="flowShaftSide state_no">
-                                <img src="../../assets/images/state_waite.png" alt="">
-                                <h5 >
-                                    <i id="">2017-11-30  14:24:08</i>
-                                    <span class="flowShaftResult">用户名称3不予采纳舆情。</span>
-                                </h5>
-                           </div>
-                            <div class="flowShaftSide state">
-                                <img src="../../assets/images/state_Agree.png"  alt="">
+                            <div class="flowShaftSide state_active">
+                                <img src="../../assets/images/state_waite.png"  alt="">
                                 <h5 >
                                     <i id="">2017-11-30  13:50:08</i>
-                                    <span class="flowShaftResult">用户名称1上报舆情。</span>
+                                    <span class="flowShaftResult">用户名称1已回执。</span>
                                 </h5>
                            </div>
                         </div>
@@ -125,11 +112,7 @@
 
                 <!--处理按钮-->
                 <div class="col-md-12 text-center  padding20 clearfix" id="showButton">
-                    <input id="" type="button" class="btn btn-primary button_red" onclick="" value="不予采纳">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input id="" type="button" class="btn btn-primary button_green" onclick="" value="采纳">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input id="reportBtn" type="button" class="btn btn-primary denyBtn_green" onclick="" value="上报">
+                    <input id="" type="button" class="btn btn-primary button_green" onclick="" value="回执">
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <input id="backListBtn" type="button" class="btn btn-primary denyBtn_green"  value="返回">
                 </div>
@@ -145,23 +128,6 @@
     <div class="text-center">Copyright © 2017 中科点击（北京）科技有限公司版权所有</div>
 </div>
 
-<!--成功提示模态框-->
-<div id="tipper" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header logocbg">
-                <h5 class="modal-title colorwhite" id="">&nbsp;&nbsp;提示</h5>
-            </div>
-            <div class="modal-body  text-center">已上报成功！</div>
-            <div class="modal-footer">
-                <div class="col-sm-12">
-                    <button type="button" class="btn btn-default denyBtn_green" data-dismiss="modal">ok</button>
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div>
-</div>
-
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         $('.selectpicker').selectpicker({
@@ -169,13 +135,6 @@
             size: 5
         });
 
-        //提示框
-        $("#reportBtn").on("click",function () {
-            $("#tipper").modal("show");
-
-            //延迟1秒提示框消失
-            setTimeout('$("#tipper").modal("hide")',1000);
-        });
 
         //实例化编辑器
         var E = window.wangEditor;
@@ -184,7 +143,7 @@
         editor.create();
 
         $("#backListBtn").on("click",function () {
-           location.href="index.html";
+           location.href="index_received.html";
         });
 
         //高度
