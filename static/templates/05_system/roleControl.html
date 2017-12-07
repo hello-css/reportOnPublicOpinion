@@ -340,13 +340,15 @@
                                 <tr>
                                     <th data-field="sort">序号</th>
                                     <th data-field="moduleAuthority">模块权限</th>
+                                    <th data-field="moduleAuthority2">子模块名称</th>
                                     <th data-field="operationAuthority">操作权限</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>舆情上报</td>
+                                    <td rowspan="2">1</td>
+                                    <td rowspan="2">舆情上报</td>
+                                    <td>舆情上报1</td>
                                     <td>
                                         <div class="authority text-left">
                                             <label>
@@ -361,8 +363,39 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td>信息下发</td>
+                                    <td>舆情上报2</td>
+                                    <td>
+                                        <div class="authority text-left">
+                                            <label>
+                                                <input type="checkbox" name="quux[1]" checked>
+                                                查看
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="quux[1]">
+                                                上报舆情
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">2</td>
+                                    <td rowspan="2">信息下发</td>
+                                    <td>信息下发1</td>
+                                    <td>
+                                        <div class="authority text-left">
+                                            <label>
+                                                <input type="checkbox" name="quux[2]" checked>
+                                                查看
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="quux[2]">
+                                                下发信息
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>信息下发2</td>
                                     <td>
                                         <div class="authority text-left">
                                             <label>
@@ -379,6 +412,7 @@
                                 <tr>
                                     <td>3</td>
                                     <td>数据统计</td>
+                                    <td>数据统计</td>
                                     <td>
                                         <div class="authority text-left">
                                             <label>
@@ -389,8 +423,9 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>4</td>
-                                    <td>系统管理</td>
+                                    <td rowspan="2">4</td>
+                                    <td rowspan="2">系统管理</td>
+                                    <td>组织用户管理</td>
                                     <td>
                                         <div class="authority text-left">
                                             <label>
@@ -404,6 +439,22 @@
                                         </div>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>角色权限管理</td>
+                                    <td>
+                                        <div class="authority text-left">
+                                            <label>
+                                                <input type="checkbox" name="quux[1]">
+                                                查看
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="quux[1]">
+                                                系统管理
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+
                                 </tbody>
                             </table>
                         </div>
