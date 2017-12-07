@@ -29,6 +29,7 @@
     <link href="../../assets/css/all.css" rel="stylesheet" >
     <link href="../../assets/css/changeBootstrap.css" rel="stylesheet" >
     <link href="../../assets/css/alert.css" rel="stylesheet" >
+    <script src="../../js/sidebar.js" type="text/javascript"></script>
     <!-- css结束 -->
 
     <style type="text/css">
@@ -62,35 +63,75 @@
         <!--时间-->
         <div id="localtime"><font color="#fff">2017-08-31 10:26:42  星期四</font></div>
         <ul id="side-menu">
-            <li id="li_index">
-                <a id="" href="">
+            <li id="li_index" class="level1">
+                <a  href="javascripe:void(0)">
                     <i class="icon"></i>
                     <span class="menu-title lineblock">舆情工作台</span>
                 </a>
+                <b></b>
+                <ul class="side-list">
+                    <li>
+                        <a  href="javascripe:void(0)"><span class="menu-title lineblock">舆情工作台</span></a>
+                    </li>
+                </ul>
             </li>
-            <li id="li_report" class="active">
-                <a id=""  href="index.html">
+            <li id="li_report" class="level1">
+                <a  href="javascripe:void(0)">
                     <i class="icon icon2"></i>
-                    <span class="menu-title lineblock">舆情上报</span>
+                    <span class="menu-title lineblock">舆情上报&nbsp;&nbsp;&nbsp;</span>
+
                 </a>
+                <b></b>
+                <ul class="side-list">
+                    <li class="active">
+                        <a  href="javascripe:void(0)"><span class="menu-title lineblock">上报接收</span></a>
+                    </li>
+                    <li>
+                        <a href="javascripe:void(0)"><span class="menu-title lineblock">上报发放</span></a>
+                    </li>
+                </ul>
             </li>
-            <li id="li_issued">
-                <a id="" href="../03_issued/index_received.html">
+            <li id="li_issued" class="level1">
+                <a  href="javascripe:void(0)">
                     <i class="icon icon3"></i>
-                    <span class="menu-title lineblock">信息下发</span>
+                    <span class="menu-title lineblock">信息下发&nbsp;&nbsp;&nbsp;</span>
                 </a>
+                <b></b>
+                <ul class="side-list">
+                    <li>
+                        <a href="javascripe:void(0)"><span class="menu-title lineblock">下发接收</span></a>
+                    </li>
+                    <li>
+                        <a href="javascripe:void(0)"><span class="menu-title lineblock">下发发放</span></a>
+                    </li>
+                </ul>
             </li>
-            <li id="li_Statistics">
-                <a id=""   href="">
+            <li id="li_Statistics" class="level1">
+                <a   href="javascripe:void(0)">
                     <i class="icon icon4"></i>
-                    <span class="menu-title lineblock">数据统计</span>
+                    <span class="menu-title lineblock">数据统计&nbsp;&nbsp;&nbsp;</span>
                 </a>
+                <b></b>
+                <ul class="side-list">
+                    <li>
+                        <a href="javascripe:void(0)"><span class="menu-title lineblock">上报统计</span></a>
+                    </li>
+                </ul>
             </li>
-            <li id="li_system">
-                <a id=""  href="">
+            <li id="li_system" class="level1">
+                <a id=""  href="javascripe:void(0)">
                     <i class="icon icon5"></i>
-                    <span class="menu-title lineblock">系统管理</span>
+                    <span class="menu-title lineblock">系统管理&nbsp;&nbsp;&nbsp;</span>
                 </a>
+                <b></b>
+                <ul class="side-list">
+                    <li>
+                        <a href="javascripe:void(0)"><span class="menu-title lineblock">组织用户管理</span></a>
+                    </li>
+                    <li>
+                        <a href="javascripe:void(0)"><span class="menu-title lineblock">角色权限管理</span></a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>
