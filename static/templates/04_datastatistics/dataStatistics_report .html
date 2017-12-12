@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>上报数据统计</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <!-- 公用插件开始 -->
+    <script src="../../assets/plugins/jquery-3.1.1/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/bootstrap-3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="../../assets/plugins/bootstrap-table/bootstrap-table.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-table/bootstrap-table.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/bootstrap-table/bootstrap-table-zh-CN.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/bootstrap-select/css/bootstrap-select.min.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/bootstrap-select/js/i18n/defaults-zh_CN.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/jquery-asDatepicker/asDatepicker.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/jquery-asDatepicker/jquery-asDatepicker.js" type="text/javascript"></script>
+    <link href="../../assets/plugins/icheck-1.x/skins/all.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/plugins/icheck-1.x/icheck.min.js" type="text/javascript"></script>
+    <!-- 公用插件结束 -->
+    <!-- css开始 -->
+    <link href="../../assets/css/publicStyle.css" rel="stylesheet"><!--一些常用css文件引入-->
+    <script src="../../js/sidebar.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/slimScroll/jquery.slimscroll.js" type="text/javascript"></script>
+    <script src="../../assets/plugins/echarts/echarts.min.js" type="text/javascript"></script>
+    <!-- css结束 -->
+
+    <style type="text/css">
+
+    </style>
+</head>
+<body class="">
+<div class="header clearfix">
+    <a href="" class="pull-left clearfix" id="">
+        <div class="logoDiv pull-left">
+            <img src="../../assets/images/logo_03.png" class="logoText" alt="">
+        </div>
+    </a>
+
+    <div class="header-left col-md-6">
+        <ol class="breadcrumb">
+            <li class="active">上报统计</li>
+        </ol>
+    </div>
+    <div class="header-right text-right pull-right" style="padding-top: 20px;">
+        <div class="roleDiv">
+            您好，<span class="role">admin </span>
+            <a href="" class="quitBtn"><b>&nbsp;|&nbsp;&nbsp;&nbsp;</b>退出</a>
+        </div>
+    </div>
+</div>
+<div id="wrapper">
+    <nav id="sidebar" role="navigation" class="navbar-default">
+        <!--时间-->
+        <div id="localtime"><font color="#fff">2017-08-31 10:26:42  星期四</font></div>
+        <ul id="side-menu">
+            <li class="level1">
+                <a  href="javascript:void(0)">
+                    <i class="icon"></i>
+                    <span class="menu-title lineblock">舆情工作台</span>
+                </a>
+            </li>
+            <li class="level1">
+                <a  href="javascript:void(0)">
+                    <i class="icon icon2"></i>
+                    <span class="menu-title lineblock">舆情上报</span>
+                </a>
+                <b></b>
+                <ul class="side-list" style="display: none">
+                    <li>
+                        <a  href="javascript:void(0)"><span class="menu-title lineblock">上报接收</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><span class="menu-title lineblock">上报发放</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="level1">
+                <a  href="javascript:void(0)">
+                    <i class="icon icon3"></i>
+                    <span class="menu-title lineblock">信息下发</span>
+                </a>
+                <b></b>
+                <ul class="side-list" style="display: none">
+                    <li>
+                        <a href="javascript:void(0)"><span class="menu-title lineblock">下发接收</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><span class="menu-title lineblock">下发发放</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="level1  current">
+                <a   href="javascript:void(0)">
+                    <i class="icon icon4"></i>
+                    <span class="menu-title lineblock">数据统计</span>
+                </a>
+                <b></b>
+                <ul class="side-list" style="display: block">
+                    <li class="active">
+                        <a href="javascript:void(0)"><span class="menu-title lineblock">上报统计</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="level1">
+                <a id=""  href="javascript:void(0)">
+                    <i class="icon icon5"></i>
+                    <span class="menu-title lineblock">系统管理</span>
+                </a>
+                <b></b>
+                <ul class="side-list" style="display: none">
+                    <li>
+                        <a href="javascript:void(0)"><span class="menu-title lineblock">组织用户管理</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><span class="menu-title lineblock">角色权限管理</span></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--sidebar左导航结束-->
+    <div id="page-wrapper" style="margin-left: 220px;">
+        <div class="page-content clearfix">
+            <div class="portlet box clearfix" style="border: 1px solid #e7e8f0;">
+                <div class="portlet-header clearfix">
+                    <div class="TxtHeader mb15">
+                        <span class="barIcon"></span> <span class="fs16">舆情上报分析</span>
+                    </div>
+                    <div class="echartHeader col-md-3 clearfix noPaddingX">
+                            <div class="data_div">
+                                <div class="data_title">
+                                    <img src="../../assets/images/report1_03.png" style="width: 19px" alt="">
+                                    <span class="fs13">&nbsp;本周累计上报舆情数</span>
+                                </div>
+                                <div class="data_content">
+                                    <h1 class="colorful_num_blue">4560</h1>
+                                    <p>
+                                        <img src="../../assets/images/top_03.png" alt="">
+                                        10% <span class="colorglay">同比上周</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="data_div">
+                                <div class="data_title">
+                                    <img src="../../assets/images/report2_03.png" style="width: 20px" alt="">
+                                    <span class="fs13">&nbsp;本周累计上报采纳数</span>
+                                </div>
+                                <div class="data_content">
+                                    <h1 class="colorful_num_green">4560</h1>
+                                    <p>
+                                        <img src="../../assets/images/top_03.png" alt="">
+                                        10% <span class="colorglay">同比上周</span>
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+                    <div id="echart-ds1" class="col-md-9" style="height:320px;border-left:1px solid #ededed;"></div>
+                </div>
+                <div class="portlet-body clearfix mt10">
+                    <table class="table table-hover table-bordered text-center data-table">
+                        <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th>2017-12-12</th>
+                            <th>2017-12-13</th>
+                            <th>2017-12-14</th>
+                            <th>2017-12-15</th>
+                            <th>2017-12-16</th>
+                            <th>2017-12-17</th>
+                            <th>2017-12-18</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>舆情上报数</td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                            </tr>
+                            <tr>
+                                <td>舆情采纳数</td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                                <td><a target="_blank" href="">31381</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--page-content结束-->
+    </div>
+    <!--page-wrapper结束-->
+</div>
+<!--wrapper结束-->
+<div id="footer"></div>
+
+<script src="../../assets/plugins/time/time.js" type="text/javascript"></script><!--时间-->
+<script src="../../js/dataStatistics_report.js" type="text/javascript"></script><!--时间-->
+<script type="text/javascript">
+    /*导入尾部*/
+    $("#footer").load("../include/footer.html");
+    jQuery(document).ready(function ($) {
+        //滚动条初始化
+       /* $("#inner-content").slimScroll({
+            height: "700px"
+        });
+        $("#myTabContent").slimScroll({
+            height: "700px"
+        });*/
+        //高度
+        ResizeHeight();
+        window.onresize=function(){
+            ResizeHeight();
+        }
+
+    });
+    function ResizeHeight(){
+        var height=$(window).height()- 67 - 40;
+        $("#wrapper").css("min-height",height);
+    }
+</script>
+
+</body>
+</html>
