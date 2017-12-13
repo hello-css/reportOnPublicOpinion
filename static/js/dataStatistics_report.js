@@ -149,16 +149,70 @@ option2 = {
         ]
     }]
 };
-
 myChart2.setOption(option2);
+
+var myChart3 = echarts.init(document.getElementById('echart-ds3'));
+var scale = 1;
+var echartData = [{
+    value: 2154,
+    name: '现场'
+}, {
+    value: 3854,
+    name: '其他'
+}, {
+    value: 3515,
+    name: '媒体'
+}, {
+    value: 4515,
+    name: '网络'
+}];
+option3 = {
+    series: [{
+        name: '来源',
+        type: 'pie',
+        radius: ['52%', '70%'],
+        hoverAnimation: false,
+        color: [ '#02cca6', '#01d8e4', '#fcdc5c','#fd6e6f'],
+        label: {
+            normal: {
+                formatter: function(params, ticket, callback) {
+                    var total = 0; //来源总数量
+                    var percent = 0; //来源占比
+                    echartData.forEach(function(value, index, array) {
+                        total += value.value;
+                    });
+                    percent = ((params.value / total) * 100).toFixed(1);
+                    return '' + params.name + '\n\n\n' + percent + '%';
+                }
+            }
+        },
+        labelLine: {
+            normal: {
+                length: 15 * scale,
+                length2: 60,
+                lineStyle: {
+                    color: '#ededed'
+                }
+            }
+        },
+        itemStyle:{
+            normal:{
+                borderWidth:5,
+                borderColor:'#fff'
+            }
+        },
+        data: echartData
+    }]
+};
+myChart3.setOption(option3);
 
 // 图表屏幕自适应
 setTimeout(function (){
  window.onresize = function () {
  myChart1.resize();
  myChart2.resize();
-  /*myChart3.resize();
- myChart4.resize();
+ myChart3.resize();
+     /*myChart4.resize();
  myChart5.resize();
  myChart6.resize();
  myChart7.resize();*/
