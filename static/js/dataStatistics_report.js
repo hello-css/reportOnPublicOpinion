@@ -206,15 +206,110 @@ option3 = {
 };
 myChart3.setOption(option3);
 
+
+var myChart4 = echarts.init(document.getElementById('echart-ds4'));
+option4 = {
+    color: ['#02cca6','#01d8e4','#ffcc01'],
+    grid: {
+        y:'6%',
+        y2:'0',
+        x:'0',
+        x2:'0',
+        containLabel: true
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+     legend: {
+        icon:'circle',
+         x: 'right',
+         padding: [0, 12, 0, 50],
+         itemWidth: 8,
+         itemHeight:8,
+         data:['点击数','评论数','预估值']
+     },
+    xAxis: [
+        {
+            axisLabel :{
+                interval:0
+            }  ,
+            show:true,
+            type: 'category',
+            data:  ['2017/12/12', '2017/12/13', '2017/12/14', '2017/12/15', '2017/12/16', '2017/12/17', '2017/12/18'],
+            fontSize: 6,
+            scale: true,
+            axisTick: {
+                alignWithLabel: false
+            },
+            splitLine: {
+                show: false
+            },
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#8e99a8',
+                    width: 1,
+                    type: 'solid'
+                }
+            }
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            axisLabel: {
+                formatter: '{value}'
+            },
+            splitLine: {
+                show: false
+            },
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#8e99a8',
+                    width: 1,
+                    type: 'solid'
+                }
+            }
+        }
+    ],
+    series : [
+        {
+            name:'点击数',
+            type:'bar',
+            barWidth:'12%',
+            barGap: '50%',
+            data:[24.0, 44.9, 27.0, 23.2, 25.6, 36.7, 76.7]
+
+
+        },
+        {
+            name:'评论数',
+            type:'bar',
+            barWidth:'12%',
+            barGap: '50%',
+            data:[32.0, 34.9, 47.0, 53.2, 45.6, 76.7, 16.7]
+        },
+        {
+            name:'预估值',
+            type:'bar',
+            barWidth:'12%',
+            barGap: '50%',
+            data:[32.0, 14.9, 67.0, 23.2, 25.6, 66.7, 36.7]
+        }
+
+    ]
+};
+myChart4.setOption(option4);
+
+
+
 // 图表屏幕自适应
 setTimeout(function (){
  window.onresize = function () {
  myChart1.resize();
  myChart2.resize();
  myChart3.resize();
-     /*myChart4.resize();
- myChart5.resize();
- myChart6.resize();
- myChart7.resize();*/
+ myChart4.resize();
  }
  },200);
