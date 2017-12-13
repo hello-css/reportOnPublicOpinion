@@ -79,14 +79,85 @@ option1 = {
 };
 myChart1.setOption(option1);
 
+var myChart2 = echarts.init(document.getElementById('echart-ds2'));
+option2 = {
+    color:['#fc6d6e','#ff9901','#ffcc01'],
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    title: {
+        text:'200',
+        subtext:'主机（台）',
+        left:'center',
+        top:'35%',
+        padding:[24,0],
+        textStyle:{
+            color:'#34495e',
+            fontSize:32,
+            align:'center'
+        },
+        subtextStyle:{
+            color:'#8d989d',
+            fontSize:14,
+            align:'center'
+        }
+    },
+   /* legend: {
+        icon : 'circle',
+        orient: 'vertical',
+        x: 'right',
+        y:'middle',
+        data: ['红色', '橙色', '黄色'],
+        itemHeight:10,
+        itemWidth:10
+    },*/
+    series: [{
+        symbol:'circle',
+        name: '等级',
+        type: 'pie',
+        radius: ['56%', '76%'],
+        avoidLabelOverlap: false,
+        label: {
+            normal: {
+                show: false,
+                position: 'center'
+            },
+            emphasis: {
+                show: false,
+                textStyle: {
+                    fontSize: '16',
+                    fontWeight: 'bold'
+                }
+            }
+        },
+        labelLine: {
+            normal: {
+                show: false
+            }
+        },
+        itemStyle:{
+            normal:{
+                borderWidth:5,
+                borderColor:'#fff'
+            }
+        },
+        data: [
+            { value: 535, name: '红色' },
+            { value: 310, name: '橙色' },
+            { value: 234, name: '黄色' }
+        ]
+    }]
+};
 
+myChart2.setOption(option2);
 
 // 图表屏幕自适应
 setTimeout(function (){
  window.onresize = function () {
  myChart1.resize();
- /*myChart2.resize();
- myChart3.resize();
+ myChart2.resize();
+  /*myChart3.resize();
  myChart4.resize();
  myChart5.resize();
  myChart6.resize();
