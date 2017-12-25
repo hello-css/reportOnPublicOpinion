@@ -26,7 +26,9 @@
     <link href="../../assets/css/publicStyle.css" rel="stylesheet"><!--一些常用css文件引入-->
     <link href="../../assets/plugins/wangEditor-3.0.15/release/wangEditor.css" type="text/css" rel="stylesheet"><!-- 编辑器-->
     <script type="text/javascript" src="../../assets/plugins/wangEditor-3.0.15/release/wangEditor.js" charset="utf-8"></script><!-- 编辑器-->
-
+    <link href="../../assets/plugins/jquery-fileUpload/css/iconfont.css" rel="stylesheet" type="text/css"/><!--文件上传-->
+    <link href="../../assets/plugins/jquery-fileUpload/css/fileUpload.css" rel="stylesheet" type="text/css"><!--文件上传-->
+    <script src="../../assets/plugins/jquery-fileUpload/js/fileUpload.js" type="text/javascript"></script><!--文件上传-->
     <style type="text/css">
 
     </style>
@@ -151,6 +153,14 @@
                             <p>趣闻 1947 年，时装设计师 Elsa Schiaparelli 将“艳粉色”引入西方时尚圈。 桃色可以营造亲密氛围，减少攻击性和敌意。 由于听说粉色有一种镇定效果，有些球队会把客队的休息室漆成粉色。 对于粉色的研究发现，男性举重运动员在粉色房间内似乎感到力不从心，而女性举重运动员面对这种颜色反而会有变强的倾向。 糕点从粉色盒子里取出或盛在粉色盘子里时，尝起来会更美味（这种情况仅适用于甜点），因为粉色令我们渴望糖份。</p>
                          </div>
                     </div>
+                    <div class="portlet-header clearfix">
+                        <span class="circle1"></span>
+                        <span class="inlineBlock  fs16">附件上传</span>
+                    </div>
+                    <div class="portlet-body clearfix">
+                        <!--文件上传fileUploadContent-->
+                        <div id="fileUploadContent" class="fileUploadContent"></div>
+                    </div>
                 </div>
                 <div class="col-md-12 text-center  padding20 clearfix" id="showButton">
                     <input id="" type="button" class="btn btn-primary button_green" onclick="" value="提交">
@@ -204,6 +214,12 @@
         editor.customConfig.zIndex = 100;
         editor.create();
 
+        /*附件上传*/
+        $("#fileUploadContent").initUpload({
+            "uploadUrl": "#",
+            //上传文件信息地址
+            "progressUrl": "#"
+        });
 
        //高度
         ResizeHeight();
